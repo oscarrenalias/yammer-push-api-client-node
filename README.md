@@ -5,6 +5,8 @@ This is an implementation of a client for Yammer's Bayeux push-based API, descri
 
 There is a sample application in the yammer-push-api/samples/ folder.
 
+The module is available via npm using 'yammer-push-api-client' as the module name: https://npmjs.org/package/yammer-push-api-client
+
 Features
 ========
 The module supports reading real-time data with the API from three different enpoints: [messages](https://developer.yammer.com/api/#message-viewing) (or rather, the All Company feed), [topics](https://developer.yammer.com/api/#topics) and [groups](https://developer.yammer.com/api/#groups). The endpoint selection is via the second parameter object provided to the YammerPushAPI constructor; use values "all", "topics" and "groups" for the "type" key.
@@ -19,7 +21,17 @@ How to use
 ==========
 The module implements an event emitter using two specific events: 'data' and 'fatal'. The first one is triggered whenever new data was received from the connection while the second is triggered when an unrecoverable error happened, and it gives applications an opportunity to clean up rather than throw an exception upwards.
 
-First, import the required modules:
+In your package.json file, add the following dependency:
+
+```
+"dependencies": {
+	"yammer-push-api-client": ">= 0.0.0"
+}
+```
+
+Then run ```npm install``` so that npm can automatically retrive the module as well as its dependencies.
+
+Import the required modules:
 
 ```
 var YammerPushAPI = require('../../yammer-push-api');
@@ -29,7 +41,7 @@ Second, create a new client:
 
 ```
 var client = new YammerPushAPI("YOUR YAMMER OAUTH 2.0 TOKEN", { type: "all" });
-````
+```
 
 Then, implement listener functiosn for the data and fatal events:
 
@@ -59,4 +71,3 @@ TODO
 ====
 * Clean up and refactor some the code, try to break it down into smaller functions
 * Currently Yammer's advice for the reconnect interval is followed, but the socket timeout is not
-* Provide the module via http://npmjs.org.
