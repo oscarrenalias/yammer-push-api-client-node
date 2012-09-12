@@ -34,7 +34,7 @@ Then run ```npm install``` so that npm can automatically retrive the module as w
 Import the required modules:
 
 ```
-var YammerPushAPI = require('../../yammer-push-api');
+var YammerPushAPI = require('yammer-push-api-client');
 ```
 
 Second, create a new client:
