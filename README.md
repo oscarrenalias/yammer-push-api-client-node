@@ -34,7 +34,7 @@ Then run ```npm install``` so that npm can automatically retrive the module as w
 Import the required modules:
 
 ```
-var YammerPushAPI = require('../../yammer-push-api');
+var YammerPushAPI = require('yammer-push-api');
 ```
 
 Second, create a new client:
@@ -66,6 +66,11 @@ The client is constantly running so the application will not exit unless there i
 License
 =======
 Apache Software License 2.0: http://www.apache.org/licenses/LICENSE-2.0
+
+Changelog
+=========
+Version 0.1.0: Initial version
+Version 0.1.1: Corrected the documentation and example
  
 TODO
 ====
