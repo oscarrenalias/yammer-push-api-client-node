@@ -40,7 +40,7 @@ var YammerPushAPI = require('yammer-push-api-client');
 Second, create a new client:
 
 ```
-var client = new YammerPushAPI("YOUR YAMMER OAUTH 2.0 TOKEN", { type: "all" });
+var client = YammerPushAPI.Client("YOUR YAMMER OAUTH 2.0 TOKEN", { type: "all" });
 ```
 
 Then, implement listener functiosn for the data and fatal events:
@@ -62,6 +62,26 @@ client.start();
 ```
 
 The client is constantly running so the application will not exit unless there is an unhandled exception.
+
+Mock client
+===========
+During development of clients that use this API it may be useful to use a reliable mechanism to receive a constant stream of messages, as opposed
+to wait for someone on our network to post something. For that purpose, the library provides a mock implementation that will generate data based on a
+configurable schedule.
+
+The mock implementation behaves just like the real client:
+
+```
+var YammerPushAPI = require('yammer-push-api-client');
+var client = YammerPushAPI.Mock({delay: 5000});
+
+client.on("data", function(data) {
+  ...
+});
+```
+
+This will generate a message every 5 seconds. The body of the message is provided in the module's lib/mock/data/data.json, and it currently is
+not configurable.
 
 License
 =======
