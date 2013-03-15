@@ -89,12 +89,11 @@ Apache Software License 2.0: http://www.apache.org/licenses/LICENSE-2.0
 
 Changelog
 =========
-Version 0.1.0: Initial version
+* Version 0.2.1: Improved error reporting in case we catch an exception.
+* Version 0.2.0: Added the mock client, changed the interface so that YammerPushAPIClient now has two main functions: Client() and Mock() that act as factorie to return the correct implementation depending on the needs.
+* Version 0.1.1: Corrected the documentation and example
+* Version 0.1.0: Initial version
 
-Version 0.1.1: Corrected the documentation and example
-
-Version 0.2.0: Added the mock client, changed the interface so that YammerPushAPIClient now has two main functions: Client() and Mock() that act as factorie to return the correct implementation depending on the needs.
- 
 TODO
 ====
 * Clean up and refactor some the code, try to break it down into smaller functions
