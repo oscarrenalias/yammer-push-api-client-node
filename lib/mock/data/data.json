@@ -4,72 +4,37 @@
     "data":{
       "data":{
         "messages":[
-          {
-            "thread_id":275417793,
-            "direct_message":false,
-            "client_url":"https://itunes.apple.com/us/app/yammer/id289559439",
-            "sender_id":1490546033,
-            "created_at":"2013/03/13 10:13:24 +0000",
-            "sender_type":"user",
-            "content_excerpt":"Test message 1",
-            "id":275815867,
-            "message_type":"update",
-            "liked_by":{
-              "names":[
+{
+        "liked_by":{
+          "count":0,
+          "names":[
 
-              ],
-              "count":0
-            },
-            "url":"https://www.yammer.com/api/v1/messages/275815867",
-            "privacy":"public",
-            "replied_to_id":275417793,
-            "network_id":538,
-            "web_url":"https://www.yammer.com/company.com/messages/275815867",
-            "body":{
-              "rich":"Test message 1",
-              "parsed":"Test message 1",
-              "plain":"Test message 1"
-            },
-            "attachments":[
-
-            ],
-            "chat_client_sequence":null,
-            "client_type":"iPad",
-            "system_message":false
-          },
-          {
-            "thread_id":275417793,
-            "direct_message":false,
-            "client_url":"https://itunes.apple.com/us/app/yammer/id289559439",
-            "sender_id":1490546033,
-            "created_at":"2013/03/13 10:13:24 +0000",
-            "sender_type":"user",
-            "content_excerpt":"Test message 2",
-            "id":275815867,
-            "message_type":"update",
-            "liked_by":{
-              "names":[
-
-              ],
-              "count":0
-            },
-            "url":"https://www.yammer.com/api/v1/messages/275815867",
-            "privacy":"public",
-            "replied_to_id":275417793,
-            "network_id":538,
-            "web_url":"https://www.yammer.com/company.com/messages/275815867",
-            "body":{
-              "rich":"Test message 2",
-              "parsed":"Test message 2",
-              "plain":"Test message 2"
-            },
-            "attachments":[
-
-            ],
-            "chat_client_sequence":null,
-            "client_type":"iPad",
-            "system_message":false
-          }          
+          ]
+        },
+        "id":277387883,
+        "chat_client_sequence":null,
+        "replied_to_id":null,
+        "sender_type":"user",
+        "message_type":"update",
+        "created_at":"2013/03/16 23:07:52 +0000",
+        "network_id":538,
+        "thread_id":277387883,
+        "sender_id":1043042,
+        "client_type":"Web",
+        "privacy":"public",
+        "web_url":"https://www.yammer.com/company.com/messages/277387883",
+        "content_excerpt":"Content excerpt",
+        "attachments":[],
+        "system_message":false,
+        "client_url":"https://www.yammer.com/",
+        "body":{
+          "parsed":"Parsed body",
+          "rich":"Rich body",
+          "plain":"Plain body"
+        },
+        "direct_message":false,
+        "url":"https://www.yammer.com/api/v1/messages/277387883"
+      }        
         ],
         "threaded_extended":{
 
@@ -89,92 +54,63 @@
         },
         "references":[
           {
-            "direct_message":false,
-            "has_attachments":false,
-            "thread_starter_id":275417793,
-            "id":275417793,
-            "stats":{
-              "first_reply_at":"2013/03/12 15:44:47 +0000",
-              "latest_reply_at":"2013/03/13 10:13:24 +0000",
-              "updates":6,
-              "latest_reply_id":275815867,
-              "shares":0,
-              "first_reply_id":275418249
-            },
-            "url":"https://www.yammer.com/api/v1/messages/in_thread/275417793",
-            "privacy":"public",
-            "topics":[
-              {
-                "id":2174183,
-                "type":"topic"
-              }
-            ],
-            "web_url":"https://www.yammer.com/company.com/#/Threads/show?threadId=275417793",
-            "type":"thread"
-          },
+        "id":2685075,
+        "web_url":"https://www.yammer.com/company.com/topics/2685075",
+        "normalized_name":"slowmojs",
+        "type":"topic",
+        "permalink":"slowmojs",
+        "name":"Slowmojs",
+        "url":"https://www.yammer.com/api/v1/topics/2685075"
+      },
+      {
+        "id":1934139,
+        "web_url":"https://www.yammer.com/company.com/topics/2685075",
+        "type":"tag",
+        "name":"slowmojs",
+        "url":"https://www.yammer.com/api/v1/tags/1934139"
+      },
+      {
+        "id":277387883,
+        "has_attachments":false,
+        "thread_starter_id":277387883,
+        "privacy":"public",
+        "web_url":"https://www.yammer.com/company.com/#/Threads/show?threadId=277387883",
+        "topics":[
           {
-            "job_title":"CIO Social Collaboration",
-            "name":"andrew-callan",
-            "id":109738,
-            "state":"active",
-            "stats":{
-              "following":378,
-              "followers":4477,
-              "updates":3746
-            },
-            "mugshot_url_template":"https://mug0.assets-yammer.com/mugshot/images/{width}x{height}/2sCG5XXB94Mz8cm3zbKj-PGv0qWXcksg",
-            "url":"https://www.yammer.com/api/v1/users/109738",
-            "mugshot_url":"https://mug0.assets-yammer.com/mugshot/images/48x48/2sCG5XXB94Mz8cm3zbKj-PGv0qWXcksg",
-            "web_url":"https://www.yammer.com/company.com/users/andrew-callan",
-            "activated_at":"2008/10/30 22:58:37 +0000",
-            "full_name":"Andrew Callan",
-            "type":"user"
-          },
-          {
-            "job_title":"GTIN-Products practitioner",
-            "name":"kairavparikh",
-            "id":1490546033,
-            "state":"active",
-            "stats":{
-              "following":40,
-              "followers":91,
-              "updates":283
-            },
-            "mugshot_url_template":"https://mug0.assets-yammer.com/mugshot/images/{width}x{height}/pTcXprd30KKgP1WpKmrM6xSkXkDJhTCk",
-            "url":"https://www.yammer.com/api/v1/users/1490546033",
-            "mugshot_url":"https://mug0.assets-yammer.com/mugshot/images/48x48/pTcXprd30KKgP1WpKmrM6xSkXkDJhTCk",
-            "web_url":"https://www.yammer.com/company.com/users/kairavparikh",
-            "activated_at":"2012/11/15 04:32:18 +0000",
-            "full_name":"Kairav Parikh",
-            "type":"user"
-          },
-          {
-            "thread_id":275417793,
-            "created_at":"2013/03/12 15:43:38 +0000",
-            "sender_id":109738,
-            "sender_type":"user",
-            "content_excerpt":"just noticed @Jeffrey Ko took over the marginally coveted \"most followed\" person on yammer spot from @Bill.....but only some through accidental admin cheating as Jeffrey did the bulk uploads for a few pilots including #retail's 6000 person invite to the [Retail-Global] group & Yammer makes anyone who accepts an invite follow the inviter automatically",
-            "id":275417793,
-            "message_type":"update",
-            "url":"https://www.yammer.com/api/v1/messages/275417793",
-            "network_id":538,
-            "replied_to_id":null,
-            "web_url":"https://www.yammer.com/company.com/messages/275417793",
-            "body":{
-              "plain":"just noticed @Jeffrey Ko took over the marginally coveted \"most followed\" person on yammer spot from @Bill.....but only some through accidental admin cheating as Jeffrey did the bulk uploads for a few pilots including #retail's 6000 person invite to the [Retail-Global] group & Yammer makes anyone who accepts an invite follow the inviter automatically"
-            },
-            "type":"message",
-            "system_message":false
-          },
-          {
-            "normalized_name":"retail",
-            "name":"Retail",
-            "id":2174183,
-            "permalink":"retail",
-            "url":"https://www.yammer.com/api/v1/topics/2174183",
-            "web_url":"https://www.yammer.com/company.com/topics/2174183",
+            "id":2685075,
             "type":"topic"
           }
+        ],
+        "type":"thread",
+        "stats":{
+          "first_reply_at":null,
+          "first_reply_id":null,
+          "shares":0,
+          "latest_reply_at":"2013/03/16 23:07:52 +0000",
+          "latest_reply_id":277387883,
+          "updates":0
+        },
+        "direct_message":false,
+        "url":"https://www.yammer.com/api/v1/messages/in_thread/277387883"
+      },
+      {
+        "id":1043042,
+        "job_title":"Job title",
+        "full_name":"John Doe",
+        "mugshot_url":"http://placehold.it/48x48",
+        "activated_at":"2010/01/13 08:51:11 +0000",
+        "web_url":"https://www.yammer.com/company.com/users/john-doe",
+        "type":"user",
+        "name":"oscar-renalias",
+        "mugshot_url_template":"https://mug0.assets-yammer.com/mugshot/images/{width}x{height}/aaaaa",
+        "stats":{
+          "updates":4459,
+          "following":137,
+          "followers":2753
+        },
+        "state":"active",
+        "url":"https://www.yammer.com/api/v1/users/112233"
+      }
         ]
       },
       "type":"message"
