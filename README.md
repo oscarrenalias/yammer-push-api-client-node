@@ -1,7 +1,7 @@
 yammer-push-api-client-node
 ===========================
 
-This is an implementation of a client for Yammer's Bayeux push-based API, described here: https://developer.yammer.com/api/realtime.html. The implementation works with Node.js 0.6.x and newer.
+This is an implementation of a client for Yammer's Bayeux push-based API, described here: https://developer.yammer.com/realtime. The implementation works with Node.js 0.6.x and newer.
 
 There is a sample application in the samples/ folder. Edit file samples/config.js, provide your own Yammer OAuth 2.0 and then run it with ```node testapp.js````.
 
