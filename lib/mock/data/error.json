@@ -1,0 +1,12 @@
+[
+  {
+    "id":"12411",
+    "error":"402::Unknown client::/meta/connect",
+    "successful":false,
+    "advice":{
+      "interval":0,
+      "reconnect":"none"
+    },
+    "channel":"/meta/connect"
+  }
+]

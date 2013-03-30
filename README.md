@@ -51,7 +51,11 @@ client.on("data", function(data) {
 })
 
 client.on("fatal", function(response) {
-	console.log("Error: " + response.statusCode);
+	console.log("Fatal error: " + response);
+})
+
+client.on("error", function(response) {
+	console.log("Error: " + response);
 })
 ```
 
@@ -62,6 +66,29 @@ client.start();
 ```
 
 The client is constantly running so the application will not exit unless there is an unhandled exception.
+
+Logging
+=======
+Logging is implemented via custom logging categories and Winston. By default debug logging is enabled and
+delivered to the console logger. 
+
+For example, in order to set the logging level to 'error' and disable colours, add these to your code after
+importing the module via ```require```:
+
+```
+var winston = require('winston');
+with(winston.loggers.get("net.renalias.yammer.pushapi")) {
+	transports.console.level = 'silly';	// Increase log level
+    transports.console.colorize = true;	// Colorize messages
+    add(winston.transports.File, {		// Add an additional log target
+		level: "debug",
+		filename: './debug.log' 
+	})
+}
+```
+
+The API client uses ```net.renalias.yammer.pushapi``` while the HTTP client used for making requests uses
+```net.renalias.yammer.pushapi.http```
 
 Mock client
 ===========
@@ -89,6 +116,7 @@ Apache Software License 2.0: http://www.apache.org/licenses/LICENSE-2.0
 
 Changelog
 =========
+* Version 1.0.0: Rewritten the client to use the Q and Q-IO promise libraries for connectivity, which greatly simplified the code.
 * Version 0.2.3: Cleaned up the test application and added some documentation about it.
 * Version 0.2.2: Cleaner test data provided from the mock API module.
 * Version 0.2.1: Improved error reporting in case we catch an exception.

@@ -1,1 +1,1 @@
-exports.oauth_token = "YOUR OAUTH 2.0 TOKEN";
+exports.oauth_token = "FILL ME IN";
