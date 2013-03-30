@@ -3,7 +3,7 @@ yammer-push-api-client-node
 
 This is an implementation of a client for Yammer's Bayeux push-based API, described here: https://developer.yammer.com/realtime. The implementation works with Node.js 0.6.x and newer.
 
-There is a sample application in the samples/ folder. Edit file samples/config.js, provide your own Yammer OAuth 2.0 and then run it with ```node testapp.js````.
+There is a sample application in the samples/ folder. Edit file samples/config.js, provide your own Yammer OAuth 2.0 and then run it with ```node app.js````.
 
 The module is available via npm using 'yammer-push-api-client' as the module name: https://npmjs.org/package/yammer-push-api-client
 
@@ -77,14 +77,16 @@ importing the module via ```require```:
 
 ```
 var winston = require('winston');
-with(winston.loggers.get("net.renalias.yammer.pushapi")) {
-	transports.console.level = 'silly';	// Increase log level
-    transports.console.colorize = true;	// Colorize messages
-    add(winston.transports.File, {		// Add an additional log target
+
+var logger = (function(logger) {
+	logger.transports.console.level = 'silly';	// Increase log level
+    logger.transports.console.colorize = true;	// Colorize messages
+    logger.add(winston.transports.File, {		// Add an additional log target
 		level: "debug",
 		filename: './debug.log' 
 	})
-}
+    return(logger);
+})(winston.loggers.get("net.renalias.yammer.pushapi"));
 ```
 
 The API client uses ```net.renalias.yammer.pushapi``` while the HTTP client used for making requests uses ```net.renalias.yammer.pushapi.http```.
