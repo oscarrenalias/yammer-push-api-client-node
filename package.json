@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "winston": ">= 0.6.0",
-    "scoped-http-client": "0.9.8",
     "q": "= 0.9.2",
     "q-io": "= 1.6.3"
   },
