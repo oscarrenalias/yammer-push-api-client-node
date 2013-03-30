@@ -1,7 +1,6 @@
 var http = require("q-io/http"),
-	YammerPushAPI = require("../lib/apiclient");
-
-var token = "TBD";
+	YammerPushAPI = require("../lib/apiclient"),
+	config = require("./config");
 
 var configAll = {
 	type: "all",
@@ -10,7 +9,7 @@ var configAll = {
 module.exports.testHandshake = function(test) {
 	test.expect(1);
 
-	var client = new YammerPushAPI.Client(token, configAll);
+	var client = new YammerPushAPI.Client(config.token, configAll);
 	client.doHandshake().then(function() {
 		test.ok(true);
 		test.done();

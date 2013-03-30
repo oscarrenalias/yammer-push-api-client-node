@@ -109,6 +109,14 @@ client.on("data", function(data) {
 This will generate a message every 5 seconds. The body of the message is provided in the module's lib/mock/data/data.json, and it currently is
 not configurable.
 
+Testing
+=======
+Basic unit testing is available and can be run via [Grunt](http://gruntjs.com/). If Grunt is not installed yet, please
+install it with ```npm -g install grunt-cli```.
+
+In order to execute the unit tests, edit file ```test/config.js``` to add your own OAuth 2.0 (as the tests will make
+real calls to Yammer's endpoints) and then run the tests with command ```grunt test```.
+
 License
 =======
 Apache Software License 2.0: http://www.apache.org/licenses/LICENSE-2.0
