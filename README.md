@@ -87,8 +87,7 @@ with(winston.loggers.get("net.renalias.yammer.pushapi")) {
 }
 ```
 
-The API client uses ```net.renalias.yammer.pushapi``` while the HTTP client used for making requests uses
-```net.renalias.yammer.pushapi.http```
+The API client uses ```net.renalias.yammer.pushapi``` while the HTTP client used for making requests uses ```net.renalias.yammer.pushapi.http```.
 
 Mock client
 ===========
