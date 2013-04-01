@@ -23,7 +23,7 @@ The module implements an event emitter using two specific events: 'data' and 'fa
 
 In your package.json file, add the following dependency:
 
-```
+```javascript
 "dependencies": {
 	"yammer-push-api-client": ">= 0.0.0"
 }
@@ -33,19 +33,19 @@ Then run ```npm install``` so that npm can automatically retrive the module as w
 
 Import the required modules:
 
-```
+```javascript
 var YammerPushAPI = require('yammer-push-api-client');
 ```
 
 Second, create a new client:
 
-```
+```javascript
 var client = YammerPushAPI.Client("YOUR YAMMER OAUTH 2.0 TOKEN", { type: "all" });
 ```
 
 Then, implement listener functiosn for the data and fatal events:
 
-```
+```javascript
 client.on("data", function(data) {
 	console.log("new data received: " + JSON.stringify(data));
 })
@@ -61,7 +61,7 @@ client.on("error", function(response) {
 
 After all the previous steps are in place, the client can be started:
 
-```
+```javascript
 client.start();
 ```
 
@@ -75,7 +75,7 @@ delivered to the console logger.
 For example, in order to set the logging level to 'error' and disable colours, add these to your code after
 importing the module via ```require```:
 
-```
+```javascript
 var winston = require('winston');
 
 var logger = (function(logger) {
@@ -99,7 +99,7 @@ configurable schedule.
 
 The mock implementation behaves just like the real client:
 
-```
+```javascript
 var YammerPushAPI = require('yammer-push-api-client');
 var client = YammerPushAPI.Mock({delay: 5000});
 
