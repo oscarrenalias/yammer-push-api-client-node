@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Oscar Renalias <oscar@renalias.net> (http://www.renalias.net)",
   "description": "A node.js client for the Yammer real-time push API",
-  "main": "./lib/api.js",
+  "main": "./lib/apiclient.js",
   "homepage": "https://github.com/oscarrenalias/yammer-push-api-client-node",
   "repository": {
     "type": "git",
