@@ -1,6 +1,6 @@
 {
   "name": "yammer-push-api-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Oscar Renalias <oscar@renalias.net> (http://www.renalias.net)",
   "description": "A node.js client for the Yammer real-time push API",
   "main": "./lib/apiclient.js",
@@ -14,7 +14,7 @@
     "node": ">= 0.6.0"
   },
   "dependencies": {
-    "winston": ">= 0.6.0",
+    "log4js": "~0.6.2",
     "q": "= 0.9.2",
     "q-io": "= 1.6.3"
   },

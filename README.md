@@ -69,27 +69,15 @@ The client is constantly running so the application will not exit unless there i
 
 Logging
 =======
-Logging is implemented via custom logging categories and Winston. By default debug logging is enabled and
-delivered to the console logger. 
+Logging is provided by the [Log4js-Node library](https://github.com/nomiddlename/log4js-node), using the following
+categories:
 
-For example, in order to set the logging level to 'error' and disable colours, add these to your code after
-importing the module via ```require```:
+* net.renalias.yammer.pushapi: general API client logging
+* net.renalias.yammer.pushapi.mock: HTTP client logging
+* net.renalias.yammer.pushapi.http: mock API logging
 
-```javascript
-var winston = require('winston');
-
-var logger = (function(logger) {
-	logger.transports.console.level = 'silly';	// Increase log level
-    logger.transports.console.colorize = true;	// Colorize messages
-    logger.add(winston.transports.File, {		// Add an additional log target
-		level: "debug",
-		filename: './debug.log' 
-	})
-    return(logger);
-})(winston.loggers.get("net.renalias.yammer.pushapi"));
-```
-
-The API client uses ```net.renalias.yammer.pushapi``` while the HTTP client used for making requests uses ```net.renalias.yammer.pushapi.http```.
+No log4js-node configuration is provided in the code so users of this module are free to provide their own log4js
+layouts, appenders and level settings by configuring log4js accordingly in their code.
 
 Mock client
 ===========
@@ -125,6 +113,7 @@ Apache Software License 2.0: http://www.apache.org/licenses/LICENSE-2.0
 
 Changelog
 =========
+* Version 1.0.1: Replaced the Winston logging library with [log4js-node](https://github.com/nomiddlename/log4js-node)
 * Version 1.0.0: Rewritten the client to use the Q and Q-IO promise libraries for connectivity, which greatly simplified the code.
 * Version 0.2.3: Cleaned up the test application and added some documentation about it.
 * Version 0.2.2: Cleaner test data provided from the mock API module.

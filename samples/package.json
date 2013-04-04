@@ -2,6 +2,6 @@
 	"name": "test-app",
 	"version": "0.1.0",
 	"dependencies": {
-		"yammer-push-api-client": "= 1.0.0"
+		"yammer-push-api-client": "= 1.0.1"
 	}
 }
