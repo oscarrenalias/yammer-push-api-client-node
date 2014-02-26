@@ -3,6 +3,8 @@ yammer-push-api-client-node
 
 This is an implementation of a client for Yammer's Bayeux push-based API, described here: https://developer.yammer.com/realtime. The implementation works with Node.js 0.6.x and newer.
 
+Please note that this is an implementation for the older version of the real-time API (which is still suported by Yammer), and not the newer one that uses https://www.yammer.com/api/v1/realtime as the entry-point to Yammer's real-time data. A future version of the module will provide support for the newer API.
+
 There is a sample application in the samples/ folder. Edit file samples/config.js, provide your own Yammer OAuth 2.0 and then run it with ```node app.js````.
 
 The module is available via npm using 'yammer-push-api-client' as the module name: https://npmjs.org/package/yammer-push-api-client
@@ -113,6 +115,7 @@ Apache Software License 2.0: http://www.apache.org/licenses/LICENSE-2.0
 
 Changelog
 =========
+* Version 1.1.0: Yammer recently changed the authentication mechanism for API calls and now the auth token must be passed as an Authorization header rather than as a query string, so this version addresses that. Also, the old Q-based HTTP client has been replaced with [promise-http-client](https://www.npmjs.org/package/promise-http-client)
 * Version 1.0.1: Replaced the Winston logging library with [log4js-node](https://github.com/nomiddlename/log4js-node)
 * Version 1.0.0: Rewritten the client to use the Q and Q-IO promise libraries for connectivity, which greatly simplified the code.
 * Version 0.2.3: Cleaned up the test application and added some documentation about it.
