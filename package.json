@@ -16,14 +16,14 @@
   "dependencies": {
     "log4js": "~0.6.2",
     "q": "= 0.9.2",
-    "q-io": "= 1.6.3"
+    "q-io": "= 1.6.3",
+  "promise-http-client": "0.1.x"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.3.0",
     "grunt-contrib-nodeunit": "~0.1.2",
-    "nodeunit": "= 0.7.4",
-    "promise-http-client": "0.1.x"
+    "nodeunit": "= 0.7.4"
   },
   "keywords": [
     "yammer"
