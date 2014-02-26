@@ -1,6 +1,6 @@
 {
   "name": "yammer-push-api-client",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Oscar Renalias <oscar@renalias.net> (http://www.renalias.net)",
   "description": "A node.js client for the Yammer real-time push API",
   "main": "./lib/apiclient.js",
